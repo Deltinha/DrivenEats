@@ -68,6 +68,8 @@ body{
 .food__picture{
     width: 144px;
     height: 87px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 .food__name{
     font-weight: 700;
