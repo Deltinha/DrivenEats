@@ -1,0 +1,87 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap');
+body{
+    background-color: #e5e5e5;
+}
+.header {
+    height: 92px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 21px;
+    background-color: #cf2b2b;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    justify-content: center;
+}
+.header__name{
+    font-family: "Righteous";
+    font-size: 44px;
+    font-weight: 700;
+}
+.header__slogan{
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 400;
+}
+.food{
+    margin-top: 123px;
+}
+.food__header-text{
+    font-family: "Righteous";
+    color: #333333;
+    font-size: 26px;
+    font-weight: 400;
+    margin-left: 19px;   
+    display: inline-block;
+    margin-bottom: 17px;
+    
+}
+.food__options{
+    display: flex;
+    overflow-x: scroll;
+    margin: auto;
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-bottom: 10px;
+    margin-bottom: 17px;
+    
+}
+.food__card{
+    height: 216px;
+    min-width: 171px;
+    border-radius: 9px;
+    box-sizing: border-box;
+    padding: 14px;
+    background-color: white;
+    font-family: "Roboto";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.food__picture{
+    width: 144px;
+    height: 87px;
+}
+.food__name{
+    font-weight: 700;
+    font-size: 16px;
+    color: #333333;
+}
+.food__description{
+    font-weight: 300;
+    font-size: 15px;
+    color: #a6a6a6;
+}
+.food__price{
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+}
+.food__separator{
+    min-width: 16px;
+}
