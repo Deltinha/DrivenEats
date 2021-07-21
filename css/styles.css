@@ -53,6 +53,7 @@ body{
 .food__card{
     height: 216px;
     min-width: 171px;
+    max-width: 171px;
     border-radius: 9px;
     box-sizing: border-box;
     padding: 14px;
