@@ -22,12 +22,12 @@
             <span class="food__header-text">Primeiro, seu prato</span>
 
             <div class="food__picker">
-                <div class="food__card food__card__green-border">
+                <div class="food__card" onclick="pickOption();" id="meal-one">
                     <img class="food__picture" src="assets/shrimpsnowpeastirfry.jpg" alt="">
                     <span class="food__name">Stir Fry de Camarão com Ervilhas</span>
                     <span class="food__description">Camarões, macarrão e ervilha torta</span>
                     <span class="food__price">R$ 39,99</span>
-                    <ion-icon name="checkmark-circle"></ion-icon>
+                    <ion-icon class="checkmark-hidden" name="checkmark-circle"></ion-icon>
                 </div>
 
                 <div class="food__separator"></div>
@@ -143,6 +143,7 @@
         </div>
     </div>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
