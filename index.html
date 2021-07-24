@@ -22,39 +22,42 @@
             <span class="food__header-text">Primeiro, seu prato</span>
 
             <div class="food__picker">
-                <div class="food__card" onclick="pickOption();" id="meal-one">
+                <div class="food__card" onclick="pickCard(this, 'food__main');">
                     <img class="food__picture" src="assets/shrimpsnowpeastirfry.jpg" alt="">
                     <span class="food__name">Stir Fry de Camarão com Ervilhas</span>
                     <span class="food__description">Camarões, macarrão e ervilha torta</span>
-                    <span class="food__price">R$ 39,99</span>
+                    <span class="food__price">R$ <span class="food__price__value">39,99</span></span>
                     <ion-icon class="checkmark-hidden" name="checkmark-circle"></ion-icon>
                 </div>
 
                 <div class="food__separator"></div>
 
-                <div class="food__card">
+                <div class="food__card" onclick="pickCard(this, 'food__main');">
                     <img class="food__picture" src="assets/thaifriedrice.jpg" alt="">
                     <span class="food__name">Arroz Frito Tailandês</span>
                     <span class="food__description">Acompanha peito de frango grelhado</span>
-                    <span class="food__price">R$ 34,99</span>
+                    <span class="food__price">R$ <span class="food__price__value">34,99</span></span>
+                    <ion-icon class="checkmark-hidden" name="checkmark-circle"></ion-icon>
                 </div>
 
                 <div class="food__separator"></div>
 
-                <div class="food__card">
+                <div class="food__card" onclick="pickCard(this, 'food__main');">
                     <img class="food__picture" src="assets/airfryerporkchops.png" alt="">
                     <span class="food__name">Costeleta de Porco na Air Fryer</span>
                     <span class="food__description">Acompanhada de arroz e banana frita</span>
-                    <span class="food__price">R$ 29,99</span>
+                    <span class="food__price">R$ <span class="food__price__value">29,99</span></span>
+                    <ion-icon class="checkmark-hidden" name="checkmark-circle"></ion-icon>
                 </div>
 
                 <div class="food__separator"></div>
 
-                <div class="food__card">
+                <div class="food__card" onclick="pickCard(this, 'food__main');">
                     <img class="food__picture" src="assets/garlicspaghetti.jpg" alt="">
                     <span class="food__name">Macarrão com Alho e Anchova</span>
                     <span class="food__description">Anchova é opcional, o alho não</span>
-                    <span class="food__price">R$ 39,99</span>
+                    <span class="food__price">R$ <span class="food__price__value">39,99</span></span>
+                    <ion-icon class="checkmark-hidden" name="checkmark-circle"></ion-icon>
                 </div>
             </div>
         </div>
@@ -62,38 +65,42 @@
             <span class="food__header-text">Agora, sua bebida</span>
 
             <div class="food__picker">
-                <div class="food__card">
+                <div class="food__card" onclick="pickCard(this, 'food__drink');">
                     <img class="food__picture" src="assets/pepsi-gengibre-290.jpg" alt="">
                     <span class="food__name">Pepsi Twist Sabor Gengibre</span>
                     <span class="food__description">Lata 350ml</span>
-                    <span class="food__price">R$ 2,49</span>
+                    <span class="food__price">R$ <span class="food__price__value">2,49</span></span>
+                    <ion-icon class="checkmark-hidden" name="checkmark-circle"></ion-icon>
                 </div>
 
                 <div class="food__separator"></div>
 
-                <div class="food__card">
+                <div class="food__card" onclick="pickCard(this, 'food__drink');">
                     <img class="food__picture" src="assets/sprite-mini-299.jpg" alt="">
                     <span class="food__name">Sprite Mini</span>
                     <span class="food__description">Lata 220ml</span>
-                    <span class="food__price">R$ 2,99</span>
+                    <span class="food__price">R$ <span class="food__price__value">2,99</span></span>
+                    <ion-icon class="checkmark-hidden" name="checkmark-circle"></ion-icon>
                 </div>
 
                 <div class="food__separator"></div>
 
-                <div class="food__card">
+                <div class="food__card" onclick="pickCard(this, 'food__drink');">
                     <img class="food__picture" src="assets/fanta-laranja-349.jpg" alt="">
                     <span class="food__name">Fanta Laranja</span>
                     <span class="food__description">Lata 350ml</span>
-                    <span class="food__price">R$ 3,49</span>
+                    <span class="food__price">R$ <span class="food__price__value">3,49</span></span>
+                    <ion-icon class="checkmark-hidden" name="checkmark-circle"></ion-icon>
                 </div>
 
                 <div class="food__separator"></div>
 
-                <div class="food__card">
+                <div class="food__card" onclick="pickCard(this, 'food__drink');">
                     <img class="food__picture" src="assets/guarana-ant-249.jpg" alt="">
                     <span class="food__name">Guaraná Antarctica</span>
                     <span class="food__description">Lata 350ml</span>
-                    <span class="food__price">R$ 2,49</span>
+                    <span class="food__price">R$ <span class="food__price__value">2,49</span></span>
+                    <ion-icon class="checkmark-hidden" name="checkmark-circle"></ion-icon>
                 </div>
             </div>
         </div>
@@ -101,38 +108,42 @@
             <span class="food__header-text">Por fim, sua sobremesa</span>
 
             <div class="food__picker">
-                <div class="food__card">
+                <div class="food__card" onclick="pickCard(this, 'food__dessert');">
                     <img class="food__picture" src="assets/margarita-pops.jpg" alt="">
                     <span class="food__name">Picolé de Margarita</span>
                     <span class="food__description">A forma mais fofa de se "beber" uma margarita</span>
-                    <span class="food__price">R$ 12,49</span>
+                    <span class="food__price">R$ <span class="food__price__value">12,49</span></span>
+                    <ion-icon class="checkmark-hidden" name="checkmark-circle"></ion-icon>
                 </div>
 
                 <div class="food__separator"></div>
 
-                <div class="food__card">
+                <div class="food__card" onclick="pickCard(this, 'food__dessert');">
                     <img class="food__picture" src="assets/neapolitan-cupcake.jpg" alt="">
                     <span class="food__name">Cupcake Napolitano</span>
                     <span class="food__description">O sabor clássico em forma de cupcake</span>
-                    <span class="food__price">R$ 7,90</span>
+                    <span class="food__price">R$ <span class="food__price__value">7,90</span></span>
+                    <ion-icon class="checkmark-hidden" name="checkmark-circle"></ion-icon>
                 </div>
 
                 <div class="food__separator"></div>
 
-                <div class="food__card">
+                <div class="food__card" onclick="pickCard(this, 'food__dessert');">
                     <img class="food__picture" src="assets/margarita-cupcake.jpg" alt="">
                     <span class="food__name">Cupcake Margarita</span>
                     <span class="food__description">Tudo é melhor em forma de cupcake</span>
-                    <span class="food__price">R$ 8,90</span>
+                    <span class="food__price">R$ <span class="food__price__value">8,90</span></span>
+                    <ion-icon class="checkmark-hidden" name="checkmark-circle"></ion-icon>
                 </div>
 
                 <div class="food__separator"></div>
 
-                <div class="food__card">
+                <div class="food__card" onclick="pickCard(this, 'food__dessert');">
                     <img class="food__picture" src="assets/bahama-cupcakes.jpg" alt="">
                     <span class="food__name">Cupcake Praia</span>
                     <span class="food__description">Eu quero férias</span>
-                    <span class="food__price">R$ 8,90</span>
+                    <span class="food__price">R$ <span class="food__price__value">8,90</span></span>
+                    <ion-icon class="checkmark-hidden" name="checkmark-circle"></ion-icon>
                 </div>
             </div>
         </div>
