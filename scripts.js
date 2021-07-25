@@ -79,6 +79,6 @@ function updateValues(){
     document.querySelector(".dessert--value").innerHTML = dessertPrice;
     document.querySelector(".dessert--value").innerHTML = document.querySelector(".dessert--value").innerHTML.replace('.',',');
 
-    document.querySelector(".total--value").innerHTML = totalPrice;
+    document.querySelector(".total--value").innerHTML = "R$ " + totalPrice;
     document.querySelector(".total--value").innerHTML = document.querySelector(".total--value").innerHTML.replace('.',',');
 }
