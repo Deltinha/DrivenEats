@@ -11,7 +11,6 @@ let mainName;
 let drinkName;
 let dessertName;
 
-
 let orderButton = document.querySelector(".white-background"); 
 
 function pickCard(card, optionType){
@@ -46,7 +45,7 @@ function placeOrder(){
     orderButton.classList.remove("hidden");
     findValues();
     updateValues();
-    
+    whatsApp();
 }
 
 function cancelOrder(){
@@ -81,4 +80,16 @@ function updateValues(){
 
     document.querySelector(".total--value").innerHTML = "R$ " + totalPrice;
     document.querySelector(".total--value").innerHTML = document.querySelector(".total--value").innerHTML.replace('.',',');
+}
+
+function whatsApp(){
+    let message = "Olá, gostaria de fazer o pedido:" +
+    "\n- Prato: " + mainName +
+    "\n- Bebida: " + drinkName +
+    "\n- Sobremesa: " + dessertName +
+    "\nTotal: R$ " + totalPrice.replace('.',',');
+    
+    let waLink = "https://wa.me/55086988259199?text=" + encodeURIComponent(message);
+
+    document.querySelector(".confirm-order__confirm").setAttribute("href",waLink);
 }
