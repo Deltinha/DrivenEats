@@ -11,6 +11,9 @@ let mainName;
 let drinkName;
 let dessertName;
 
+let userName;
+let userAddress;
+
 let orderButton = document.querySelector(".white-background"); 
 
 function pickCard(card, optionType){
@@ -43,6 +46,7 @@ function enablePlaceOrder(){
 
 function placeOrder(){
     orderButton.classList.remove("hidden");
+    askInfo();
     findValues();
     updateValues();
     whatsApp();
@@ -52,7 +56,7 @@ function cancelOrder(){
     orderButton.classList.add("hidden");
 }
 
-function findValues(){
+function findValues(){  //Stores the names and prices of the user sletcted cards in global variables
     mainPrice = Number(mainChecked.querySelector(".food__price__value").innerHTML.replace(',','.'));
     drinkPrice = Number(drinkChecked.querySelector(".food__price__value").innerHTML.replace(',','.'));
     dessertPrice  = Number(dessertChecked.querySelector(".food__price__value").innerHTML.replace(',','.'));
@@ -64,22 +68,22 @@ function findValues(){
     dessertName = dessertChecked.querySelector(".food__name").innerHTML;
 }
 
-function updateValues(){
-    document.querySelector(".main--name").innerHTML = mainName;
-    document.querySelector(".drink--name").innerHTML = drinkName;
-    document.querySelector(".dessert--name").innerHTML = dessertName;
+function updateValues(){  //Updates the info in the confirm order box
+    document.querySelector(".confirm-order__list__main-name").innerHTML = mainName;
+    document.querySelector(".confirm-order__list__drink-name").innerHTML = drinkName;
+    document.querySelector(".confirm-order__list__dessert-name").innerHTML = dessertName;
    
-    document.querySelector(".main--value").innerHTML = mainPrice;
-    document.querySelector(".main--value").innerHTML = document.querySelector(".main--value").innerHTML.replace('.',',');
+    document.querySelector(".confirm-order__list__main-value").innerHTML = mainPrice;
+    document.querySelector(".confirm-order__list__main-value").innerHTML = document.querySelector(".confirm-order__list__main-value").innerHTML.replace('.',',');
 
-    document.querySelector(".drink--value").innerHTML = drinkPrice;
-    document.querySelector(".drink--value").innerHTML = document.querySelector(".drink--value").innerHTML.replace('.',',');
+    document.querySelector(".confirm-order__list__drink-value").innerHTML = drinkPrice;
+    document.querySelector(".confirm-order__list__drink-value").innerHTML = document.querySelector(".confirm-order__list__drink-value").innerHTML.replace('.',',');
     
-    document.querySelector(".dessert--value").innerHTML = dessertPrice;
-    document.querySelector(".dessert--value").innerHTML = document.querySelector(".dessert--value").innerHTML.replace('.',',');
+    document.querySelector(".confirm-order__list__dessert-value").innerHTML = dessertPrice;
+    document.querySelector(".confirm-order__list__dessert-value").innerHTML = document.querySelector(".confirm-order__list__dessert-value").innerHTML.replace('.',',');
 
-    document.querySelector(".total--value").innerHTML = "R$ " + totalPrice;
-    document.querySelector(".total--value").innerHTML = document.querySelector(".total--value").innerHTML.replace('.',',');
+    document.querySelector(".confirm-order__list__total-value").innerHTML = "R$ " + totalPrice;
+    document.querySelector(".confirm-order__list__total-value").innerHTML = document.querySelector(".confirm-order__list__total-value").innerHTML.replace('.',',');
 }
 
 function whatsApp(){
@@ -87,9 +91,16 @@ function whatsApp(){
     "\n- Prato: " + mainName +
     "\n- Bebida: " + drinkName +
     "\n- Sobremesa: " + dessertName +
-    "\nTotal: R$ " + totalPrice.replace('.',',');
+    "\nTotal: R$ " + totalPrice.replace('.',',') +
+    "\n\nNome: " + userName +
+    "\nEndereço: " + userAddress;
     
     let waLink = "https://wa.me/55086988259199?text=" + encodeURIComponent(message);
 
     document.querySelector(".confirm-order__confirm").setAttribute("href",waLink);
+}
+
+function askInfo(){
+    userName = prompt("Informe seu nome:")
+    userAddress = prompt("Informe seu endereço:")
 }
